@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@types/lodash@^4.14.169":
-  version "4.14.169"
-  resolved "https://registry.nlark.com/@types/lodash/download/@types/lodash-4.14.169.tgz?cache=0&sync_timestamp=1620802984096&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Flodash%2Fdownload%2F%40types%2Flodash-4.14.169.tgz#83c217688f07a4d9ef8f28a3ebd1d318f6ff4cbb"
-  integrity sha1-g8IXaI8HpNnvjyij69HTGPb/TLs=
-
 "@types/node@^15.3.0":
   version "15.3.1"
   resolved "https://registry.nlark.com/@types/node/download/@types/node-15.3.1.tgz#23a06b87eedb524016616e886b116b8fdcb180af"
@@ -55,11 +50,6 @@ is-core-module@^2.2.0:
   integrity sha1-jp/I4VAnsBFBgCbpjw5vTYYwXME=
   dependencies:
     has "^1.0.3"
-
-lodash@^4.17.21:
-  version "4.17.21"
-  resolved "https://registry.nlark.com/lodash/download/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
 
 nanoid@^3.1.23:
   version "3.1.23"
