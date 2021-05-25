@@ -40,7 +40,7 @@ export default (() => {
     )
   }
 
-  parse("{\"name\":\"宋帅\"}") // ok
+  parse("{\"name\":\"帅神orz\"}") // ok
 
   
   /**
