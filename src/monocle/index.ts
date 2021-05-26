@@ -55,10 +55,10 @@ import { pipe } from 'fp-ts/function'
 import * as O from 'monocle-ts/Optional'
 import { some, none } from 'fp-ts/Option'
 
-const Lens$Company = Lens.fromProp<Employee>()('company')
-const Lens$Address = Lens.fromProp<Company>()('address')
-const Lens$Street = Lens.fromProp<Address>()('street')
-const Lens$Name = Lens.fromProp<Street>()('name')
+// const Lens$Company = Lens.fromProp<Employee>()('company')
+// const Lens$Address = Lens.fromProp<Company>()('address')
+// const Lens$Street = Lens.fromProp<Address>()('street')
+// const Lens$Name = Lens.fromProp<Street>()('name')
 
 const capitalize = (s: string): string => s.substring(0, 1).toUpperCase() + s.substring(1)
 
@@ -68,11 +68,11 @@ const capitalizeName = pipe(
   L.prop('address'),
   L.prop('street'),
   L.prop('name'),
-  L.modify(capitalize)
+  L.modify(capitalize),
 )
 
 // 相同的效果
-console.log("capitalizeName", capitalizeName(employee)) 
+console.log("capitalizeName", capitalizeName(employee))
 
 const firstLetterOptional: O.Optional<string, string> = {
   getOption: (s) => (s.length > 0 ? some(s[0]) : none),

@@ -3,5 +3,5 @@ import * as moncle from "./monocle";
 import * as FP from './fp'
 
 // c;
-// FP;
-moncle;
+// moncle;
+FP;
