@@ -4,7 +4,7 @@ import { contramap } from "fp-ts/lib/Eq";
 
 export default (() => {
   interface Eq<A> {
-    /** returns `true` if `x` is equal to `y` */
+    /** ret `true` if `x` is equal to `y` */
     equals: (x: A, y: A) => boolean;
   }
 
@@ -27,15 +27,10 @@ export default (() => {
   }
 
   const isEqByA$AS = elem(eqNumber);
-  isEqByA$AS(1, [2, 3, 4, 5]); // logs -> `False`
-  isEqByA$AS(1, [1, 2, 3, 4]); // logs -> `True`
+  isEqByA$AS(1, [2, 3, 4, 5]); // logs -> `false`
+  isEqByA$AS(1, [1, 2, 3, 4]); // logs -> `true`
 
   // 更复杂些 😀😁😂😃😄😅😆😉😊😋😎😍😘😗😙😚😇😐😑😶😏😣😥😮😯😪😫😴😌😛😜😝😒😓😔😕😲😷😖😞😟😤😢😭😦😧😨😬😰😱😳😵😡😠😈
-
-  type Point = {
-    x: number;
-    y: number;
-  };
 
   const eqPoint = getStructEq({
     x: eqNumber,
@@ -66,6 +61,6 @@ export default (() => {
   const or1 = { userId: 100, name: "帅神orz" };
   const or2 = { userId: 101, name: "orz" };
 
-  eqUser1.equals(or1, or2); // `logs` => true
-  eqUser2.equals(or1, or2); // `logs` => false
+  eqUser1.equals(or1, or2); // logs => true
+  eqUser2.equals(or1, or2); // logs => false
 })();

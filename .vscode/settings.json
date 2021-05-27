@@ -1,3 +1,4 @@
 {
-    "editor.codeLensFontFamily": "Consolas, 'Courier New', monospace"
+    "editor.codeLensFontFamily": "Consolas, 'Courier New', monospace",
+    "compile-hero.disable-compile-files-on-did-save-code": false
 }
