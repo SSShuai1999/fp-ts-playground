@@ -1,4 +1,6 @@
 export default ~(() => {
+  // [{ type: "🍇", commit: "👍🏿" },{ type: "🥕", commit: "😭" }]
+  
   const data = [
     {
         "id":79819,

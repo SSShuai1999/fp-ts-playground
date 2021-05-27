@@ -51,6 +51,11 @@ is-core-module@^2.2.0:
   dependencies:
     has "^1.0.3"
 
+monocle-ts@^2.3.10:
+  version "2.3.10"
+  resolved "https://registry.nlark.com/monocle-ts/download/monocle-ts-2.3.10.tgz#f5edaacc459103ab6dda07ed0e297f0cd6455ed8"
+  integrity sha1-9e2qzEWRA6tt2gftDil/DNZFXtg=
+
 nanoid@^3.1.23:
   version "3.1.23"
   resolved "https://registry.nlark.com/nanoid/download/nanoid-3.1.23.tgz#f744086ce7c2bc47ee0a8472574d5c78e4183a81"
