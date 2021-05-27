@@ -1,6 +1,10 @@
 import * as Eq from "./eq";
+import * as Identity from "./Identity";
+import * as Order from "./order";
 
-Eq;
+// Eq;
+// Identity;
+Order;
 
 export default (() => {
   // const data1 = ['1', 2, 3, 4]
@@ -15,14 +19,14 @@ export default (() => {
   //   const index = as.findIndex(predicate)
   //   return index === -1 ? none : some(index)
   // }
-  // findIndex(data1, (s) => s === '1') // logs -> { _tag: "Some", value: 0 }
+  // findIndex(data1, (s) => s === '1') // logs => { _tag: "Some", value: 0 }
   // /**
   //  * 用例: 可能失败并返回未定义(或 null)的 API。
   //  */
   // function find<A>(as: Array<A>, predicate: (a: A) => boolean): Option<A> {
   //   return fromNullable(as.find(predicate))
   // }
-  // find(data2, (item) => item.commit === '😍')  // logs -> { _tag: "None" }
+  // find(data2, (item) => item.commit === '😍')  // logs => { _tag: "None" }
   // /**
   //  * 用例: 一个可能抛出。
   //  */

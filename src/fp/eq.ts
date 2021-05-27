@@ -27,8 +27,8 @@ export default (() => {
   }
 
   const isEqByA$AS = elem(eqNumber);
-  isEqByA$AS(1, [2, 3, 4, 5]); // logs -> `false`
-  isEqByA$AS(1, [1, 2, 3, 4]); // logs -> `true`
+  isEqByA$AS(1, [2, 3, 4, 5]); // logs => `false`
+  isEqByA$AS(1, [1, 2, 3, 4]); // logs => `true`
 
   // 更复杂些 😀😁😂😃😄😅😆😉😊😋😎😍😘😗😙😚😇😐😑😶😏😣😥😮😯😪😫😴😌😛😜😝😒😓😔😕😲😷😖😞😟😤😢😭😦😧😨😬😰😱😳😵😡😠😈
 
@@ -71,8 +71,8 @@ export default (() => {
     equals: (x, y) => x > y,
   };
 
-  elem2(eqElem)(5, [1, 2, 3, 4]); // logs -> false
-  elem2(eqElem)(5, [1, 2, 3, 4, 5, 6]); // logs -> true
+  elem2(eqElem)(5, [1, 2, 3, 4]); // logs => false
+  elem2(eqElem)(5, [1, 2, 3, 4, 5, 6]); // logs => true
 
   const fromEq = getEq(eqById);
   console.log(fromEq.equals([5, 6, 7], [2, 3, 4]));

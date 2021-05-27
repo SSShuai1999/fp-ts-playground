@@ -11,7 +11,7 @@
 //     return index === -1 ? none : some(index)
 //   }
 
-//   findIndex(data1, (s) => s === '1') // logs -> { _tag: "Some", value: 0 }
+//   findIndex(data1, (s) => s === '1') // logs => { _tag: "Some", value: 0 }
 
 //   /**
 //    * 用例: 可能失败并返回未定义(或 null)的 API。
@@ -20,7 +20,7 @@
 //     return fromNullable(as.find(predicate))
 //   }
  
-//   find(data2, (item) => item.commit === '😍')  // logs -> { _tag: "None" }
+//   find(data2, (item) => item.commit === '😍')  // logs => { _tag: "None" }
 
 
 //   /**
