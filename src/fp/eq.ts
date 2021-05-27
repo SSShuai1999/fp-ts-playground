@@ -63,4 +63,15 @@ export default (() => {
 
   eqUser1.equals(or1, or2); // logs => true
   eqUser2.equals(or1, or2); // logs => false
+
+  function elem2<A>(E: Eq<A>): (a: A, as: A[]) => boolean {
+    return (a, as) => as.some((item) => E.equals(item, a));
+  }
+
+  const eqElem: Eq<number> = {
+    equals: (x, y) => x > y,
+  };
+
+  elem2(eqElem)(5, [1, 2, 3, 4]); // logs -> false
+  elem2(eqElem)(5, [1, 2, 3, 4, 5, 6]); // logs -> true
 })();
