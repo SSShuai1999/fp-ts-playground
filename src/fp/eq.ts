@@ -1,4 +1,4 @@
-import { getStructEq } from "fp-ts/lib/Eq";
+import { fromEquals, getStructEq } from "fp-ts/lib/Eq";
 import { getEq } from "fp-ts/lib/Array";
 import { contramap } from "fp-ts/lib/Eq";
 
@@ -38,7 +38,6 @@ export default (() => {
   });
 
   eqPoint.equals({ x: 1, y: 1 }, { x: 1, y: 1 }); // logs => `true`
-
   const eqArrayOfPoints = getEq(eqPoint);
   eqArrayOfPoints.equals([{ x: 1, y: 1 }], [{ x: 1, y: 1 }]); // logs => `true`
 
@@ -74,4 +73,7 @@ export default (() => {
 
   elem2(eqElem)(5, [1, 2, 3, 4]); // logs -> false
   elem2(eqElem)(5, [1, 2, 3, 4, 5, 6]); // logs -> true
+
+  const fromEq = getEq(eqById);
+  console.log(fromEq.equals([5, 6, 7], [2, 3, 4]));
 })();
