@@ -1,10 +1,12 @@
-import * as Eq from "./eq";
-import * as Identity from "./Identity";
-import * as Order from "./order";
+// import * as Eq from "./eq"; // 2021.5.26
+// import * as Identity from "./Identity"; // 2021.5.26
+// import * as Order from "./order"; // 2021.5.27
+import * as Semigroup from "./semigroup"; // 2021.5.30
 
 // Eq;
 // Identity;
-Order;
+// Order;
+Semigroup;
 
 export default (() => {
   // const data1 = ['1', 2, 3, 4]
