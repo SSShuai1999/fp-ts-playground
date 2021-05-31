@@ -39,7 +39,6 @@ export default (() => {
    * ....
    */
 
-
   /**
    * Type class definition 类型定义
    * 通常在 fp-ts 中，fp-ts/lib/semigroup 模块中包含的类型类半群被实现为一个 Typescript 接口，其中操作 * 被命名为 concat
