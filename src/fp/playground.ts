@@ -1,5 +1,3 @@
-
-
 //   /**
 //    * 可能失败并返回代码域的特殊值的 API。
 //    */
@@ -19,9 +17,8 @@
 //   function find<A>(as: Array<A>, predicate: (a: A) => boolean): Option<A> {
 //     return fromNullable(as.find(predicate))
 //   }
- 
-//   find(data2, (item) => item.commit === '😍')  // logs => { _tag: "None" }
 
+//   find(data2, (item) => item.commit === '😍')  // logs => { _tag: "None" }
 
 //   /**
 //    * 用例: 一个可能抛出。
@@ -41,4 +38,3 @@
 //   const random: IO<number> = () => Math.random()
 
 //   console.log(random())
-
