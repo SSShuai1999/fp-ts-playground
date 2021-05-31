@@ -1,12 +1,14 @@
 // import * as Eq from "./eq"; // 2021.5.26
 // import * as Identity from "./Identity"; // 2021.5.26
 // import * as Order from "./order"; // 2021.5.27
-import * as Semigroup from "./semigroup"; // 2021.5.30
+// import * as Semigroup from "./semigroup"; // 2021.5.30
+import * as Monoid from "./monoid"; // 2021.5.31
 
 // Eq;
 // Identity;
 // Order;
-Semigroup;
+// Semigroup;
+Monoid;
 
 export default (() => {
   // const data1 = ['1', 2, 3, 4]

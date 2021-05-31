@@ -1,0 +1,5 @@
+/**
+ * Category
+ */
+
+export default (() => {})();
