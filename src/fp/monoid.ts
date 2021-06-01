@@ -177,7 +177,7 @@ export default (() => {
     [K in keyof T]: T[K] extends Option<infer R> ? R : T[K];
   };
 
-  const monoidSettings: Ocarm<Monoid<Settings>> = getStructMonoid({
+  const monoidSettings: Monoid<Settings> = getStructMonoid({
     fontFamily: getLastMonoid(),
     fontSize: getLastMonoid(),
     maxColumn: getFirstMonoid(),
