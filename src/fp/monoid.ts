@@ -15,10 +15,6 @@ import {
 
 export default (() => {
   /**
-   * 半群补货了 "合并" 值的概念（通过 concat），半群是任何碰巧有一个特殊值的半群，这个特殊值相对于凹而言是 "中性" 的。
-   */
-
-  /**
    * Type class definition 类型定义
    * 通常在 fp-ts 中， fp-ts/lib/Monoid 模块中包含的类型类 Monoid 被实现为一个 Typescript 接口，其中的 nentral 值为空
    */
@@ -91,6 +87,8 @@ export default (() => {
     x: monoidSum,
     y: monoidSum,
   });
+
+  console.log(monoidPoint);
 
   /**
    * 我们可以继续使用刚刚定义的实例提供 getStructMonoid
@@ -175,27 +173,33 @@ export default (() => {
     maxColumn: Option<number>;
   }
 
-  const monoidSettings: Monoid<Settings> = getStructMonoid({
-    fontFamily: getLastMonoid<string>(),
-    fontSize: getLastMonoid<number>(),
-    maxColumn: getLastMonoid<number>(),
+  type Ocarm<T> = {
+    [K in keyof T]: T[K] extends Option<infer R> ? R : T[K];
+  };
+
+  const monoidSettings: Ocarm<Monoid<Settings>> = getStructMonoid({
+    fontFamily: getLastMonoid(),
+    fontSize: getLastMonoid(),
+    maxColumn: getFirstMonoid(),
   });
 
   const workspaceSettings: Settings = {
     fontFamily: some("Courier"),
     fontSize: none,
-    maxColumn: some(80),
+    maxColumn: none,
   };
 
   const userSettings: Settings = {
     fontFamily: some("Fira Code"),
     fontSize: some(12),
-    maxColumn: none,
+    maxColumn: some(80),
   };
 
   /** userSettings overrides workspaceSettings */
   monoidSettings.concat(workspaceSettings, userSettings);
+
   /**
+   * logs ↓
    * {
    *   fontFmaily: some("Fira Code"),
    *   fontSize: some(12),

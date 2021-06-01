@@ -1,5 +1,5 @@
 /**
- * Category
+ * category
  */
 
 export default (() => {})();
