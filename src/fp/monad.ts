@@ -39,7 +39,7 @@ export default (() => {
   //@ts-ignore
   declare const user: User;
 
-  const followersOfFollowers1: Array<Array<User>> =
+  const followersOfFollowers: Array<Array<User>> =
     getFollowers(user).map(getFollowers);
 
   /**
