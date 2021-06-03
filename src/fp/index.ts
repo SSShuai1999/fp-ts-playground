@@ -4,7 +4,8 @@
 // import * as Semigroup from "./semigroup"; // 2021.05.30
 // import * as Monoid from "./monoid"; // 2021.05.31
 // import * as Category from "./category"; // 2021.06.01
-import * as Applicationative from "./applicationative"; // 2021.06.02
+// import * as Applicationative from "./applicationative"; // 2021.06.02
+import * as Monad from "./monad"; // 2021.06.03
 
 // Eq;
 // Identity;
@@ -12,4 +13,5 @@ import * as Applicationative from "./applicationative"; // 2021.06.02
 // Semigroup;
 // Monoid;
 // Category;
-Applicationative;
+// Applicationative;
+Monad;
