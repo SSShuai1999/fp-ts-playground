@@ -77,4 +77,20 @@ export default (() => {
   const inverseHead: Option<number> = flatten(
     option.map(head([1, 2, 3]), inverse)
   );
+
+  // const a = [1,2,3,4]
+  // const b = [5,6,7,8]
+  type Includes<T extends readonly any[], U> = U extends T[number]
+    ? true
+    : false;
+
+  const test: Includes<[boolean, 2, 3, 5, 6, 7], false>;
+  const test2: Includes<[{ a: "A" }, { b: "B" }], { a: "A" }>;
+
+  type sdd = { a: "A" } extends {} ? true : false;
+
+  type a1<T> = T;
+
+  const a2: false extends [boolean, 2, 3, 5, 6, 7][number] ? true : false;
+  const a3: { a: "A" } extends [{}, 2, 3, 5, 6, 7][number] ? true : false;
 })();
