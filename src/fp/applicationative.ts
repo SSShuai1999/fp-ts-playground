@@ -53,6 +53,10 @@ export default (() => {
     of: <A>(a: A) => HKT<F, A>;
   }
 
+  interface Applicative<F> extends Apply<F> {
+    of: <A>(a: A) => HKT<F, A>;
+  }
+
   /**
    * 让我们看看一些常见数据类型的 applicationative 实例
    */
