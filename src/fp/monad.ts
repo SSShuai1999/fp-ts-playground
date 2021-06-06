@@ -39,8 +39,8 @@ export default (() => {
   //@ts-ignore
   declare const user: User;
 
-  const followersOfFollowers: Array<Array<User>> =
-    getFollowers(user).map(getFollowers);
+  // const followersOfFollowers: Array<Array<User>> =
+  //   getFollowers(user).map(getFollowers);
 
   /**
    * 这里有一些问题，follwersOfFollowers 类型为 Array<Array<User>>，但是我们需要 Array<User>
@@ -48,9 +48,9 @@ export default (() => {
    * 扁平化： <A>(mma: Array<Array<A>>) => Array<A> 函数由 fp-ts 导出，这样就方便了
    */
 
-  const followersOfFollowers2: Array<User> = flatten(
-    getFollowers(user).map(getFollowers)
-  );
+  // const followersOfFollowers2: Array<User> = flatten(
+  //   getFollowers(user).map(getFollowers)
+  // );
 
   /**
    * 很好，那么其他的数据类型呢？
@@ -73,8 +73,4 @@ export default (() => {
 
   const flatten2 = <A>(mma: Option<Option<A>>): Option<A> =>
     isNone(mma) ? none : mma.value;
-
-  const inverseHead: Option<number> = flatten(
-    option.map(head([1, 2, 3]), inverse)
-  );
 })();

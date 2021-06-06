@@ -6,3 +6,29 @@ const fn = (v: boolean) => {
 };
 
 type ret = MyReturnType<typeof fn>;
+
+type MyOmit<T, K> = {
+  [S in keyof T]: S extends K ? never : T[S];
+};
+
+type cases = [
+  //   Expect<Equal<Expected1, MyOmit<Todo, 'description'>>>,
+//   Expect<Equal<Expected2, MyOmit<Todo, 'description' | 'completed'>>>
+];
+
+interface Todo {
+  title: string;
+  description: string;
+  completed: boolean;
+}
+
+interface Expected1 {
+  title: string;
+  completed: boolean;
+}
+
+interface Expected2 {
+  title: string;
+}
+
+type s = MyOmit<Todo, "description" | "completed">;
