@@ -31,4 +31,4 @@ interface Expected2 {
   title: string;
 }
 
-type s = MyOmit<Todo, "description" | "completed">;
+type GetReturnTypeTest = MyOmit<Todo, "description" | "completed">;
