@@ -15,6 +15,7 @@ export default (() => {
    * 首先，我们必须为一个函数建模，改函数接受两个参数，比如类型 B和 C（我们可以使用数组），并返回类型 D 的值
    * g: (args: [B, C]) => D
    */
+
   /**
    * 我们可以使用一种叫做 currying 的技术来重写 g
    * Curring 是一种技术，它将一个函数的求值转换为一个函数序列的求知，每个函数都有一个参数。例如，一个函数接受两个参数，
@@ -75,7 +76,6 @@ export default (() => {
   /**
    * Examle (F = Option)
    */
-
   const applicativeOption = {
     map: <A, B>(fa: Option<A>, f: (a: A) => B): Option<B> =>
       //@ts-ignore
@@ -90,7 +90,6 @@ export default (() => {
   /**
    * Examle (F = Task)
    */
-
   const applicativeTask = {
     map:
       <A, B>(fa: Task<A>, f: (a: A) => B): Task<B> =>

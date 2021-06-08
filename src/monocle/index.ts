@@ -20,7 +20,7 @@ interface Employee {
   company: Company;
 }
 
-// // 假设我们有一个雇员，我们需要大写他的公司街道名称的第一个字符，下面是我们如何用普通的 js 编写它的方法
+// 假设我们有一个雇员，我们需要大写他的公司街道名称的第一个字符，下面是我们如何用普通的 js 编写它的方法
 const employee: Employee = {
   name: "john",
   company: {
