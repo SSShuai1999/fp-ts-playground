@@ -9,8 +9,8 @@ type DeepReadonly<T> = {
 type test = DeepReadonly<X>;
 
 const testC: test = {
-  a: () => 22,
-  b: "是是是",
+  a: () => 1,
+  b: "测试",
   c: {
     d: true,
     e: {
